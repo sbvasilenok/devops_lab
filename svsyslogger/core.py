@@ -82,7 +82,7 @@ def main():
             interval = 300
             logtype = 'plain'
             print('config.conf read error, defaults loaded')
-        finally:
+        else:
             try:
                 interval = int(config['common']['interval'])
             except KeyError:
@@ -95,7 +95,7 @@ def main():
                 logpath = config['common']['logpath']
             except KeyError:
                 logpath = os.path.abspath(os.path.dirname(__file__))
-            finally:
+            else:
                 if not os.path.exists(logpath):
                     try:
                         os.makedirs(logpath)
