@@ -1,5 +1,5 @@
 ### Install
-To install package switch to test environment (optional), then run in console:
+To install package switch to test environment (optional), goto dist directoy and then run in console:
 $ pip install *.whl
 
 ### Usage 
